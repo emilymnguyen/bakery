@@ -16,32 +16,25 @@ function getHeight(obj){
     return height;
 };
 
-function offset(pic, container) {
-    var width = getWidth(pic);
-    var height = getHeight(pic);
-    var cWidth = getWidth(container);
-    var cHeight = getHeight(container);
-  //  alert(width+" "+height);
-    
-    if (width >= height) {
-        pic.css('max-height', cHeight);
-        width = getWidth(pic);
-        var offset = -(width - cWidth)/2;    
-        pic.css('margin-left', offset);
+function setMaxDim(pic, dim) {
+    if (getHeight(pic) >= getWidth(pic)) {
+           $(pic).css('width',dim);
+        $(pic).css('height',"");
     }
-    else {
-        pic.css('max-width', cWidth);
-        height = getHeight(pic);
-        var offset = -(height - cHeight)/2;  
-        pic.css('margin-top', offset);
-    }
+         else {
+           $(pic).css('height',dim);
+             $(pic).css('width',"");
+         }
+    return;
 }
+
 
 var main = function () {
     // ALIGN GALLERY
-      $('#gallery li').each(function () {
-        offset($(this).find('img'), $(this).find('.img-container'));
-    });
+    $('#gallery li').each(function () {
+        var pic = $(this).find('img');
+        setMaxDim(pic,"280px");
+        });
     
     // GALLERY IMG HOVER
     $('#gallery li').hover(function () {
@@ -59,7 +52,8 @@ var main = function () {
         // Set img src for expanded img
         $('.exp-img-container').find('img').attr('src',img);
         // Align exp image
-        offset($('.exp-img-container').find('img'),$('.exp-img-container'));
+        var pic = $('.exp-img-container').find('img');
+        setMaxDim(pic, "500px");
         // Set title
         var title = $(this).find('span').text();
         $('.wrapper h2').text(title);
@@ -74,9 +68,11 @@ var main = function () {
     $('.close').click(function () {
         $('#overlay').hide();
     });
+    /*
     // Show page when done
     $('body').css('visibility',"visible");
-    $('html').css('visibility',"visible");
+    $('html').css('visibility',"visible");*/
 };
 
-$(document).ready(main);
+//$(document).ready(main);
+$(window).on('load', main);
