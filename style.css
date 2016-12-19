@@ -15,6 +15,7 @@
 html, body {
     margin: 0 !important;
     padding: 0 !important;
+    visibility: hidden;
 }
 body {
     background-olor: #F5F5F5;

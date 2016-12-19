@@ -41,8 +41,6 @@ var main = function () {
     // ALIGN GALLERY
       $('#gallery li').each(function () {
         offset($(this).find('img'), $(this).find('.img-container'));
-           offset($(this).find('img'), $(this).find('.img-container'));
-           offset($(this).find('img'), $(this).find('.img-container'));
     });
     
     // GALLERY IMG HOVER
@@ -76,6 +74,9 @@ var main = function () {
     $('.close').click(function () {
         $('#overlay').hide();
     });
+    // Show page when done
+    $('body').css('visibility',"visible");
+    $('html').css('visibility',"visible");
 };
 
 $(document).ready(main);
