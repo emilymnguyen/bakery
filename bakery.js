@@ -74,5 +74,5 @@ var main = function () {
     $('html').css('visibility',"visible");*/
 };
 
-//$(document).ready(main);
-$(window).on('load', main);
+$(document).ready(main);
+//$(window).on('load', main);
