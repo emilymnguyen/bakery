@@ -38,11 +38,14 @@ var main = function () {
     
     // GALLERY IMG HOVER
     $('#gallery li').hover(function () {
+         // Set img-container background color
+    $('.img-container').css('background-color',"#000");
         $(this).find('img').fadeTo(400,0.5);
         $(this).find('span').fadeTo(400,1);
     }, function() {
         $(this).find('img').fadeTo(400,1);
         $(this).find('span').fadeTo(400,0);
+        
     });
     // GALLERY LI CLICK
     $('#gallery li').click(function () {
@@ -69,8 +72,7 @@ var main = function () {
         $('#overlay').hide();
     });
     
-    // Set img-container background color
-    $('.img-container').css('background-color',"#000");
+   
     /*
     // Show page when done
     $('body').css('visibility',"visible");
