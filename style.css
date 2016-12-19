@@ -100,7 +100,7 @@ body {
 }
 
 .img-container {
-    width: var(--img-dim);
+    width: auto;
     height: var(--img-dim);
     overflow: hidden;
     position: relative;
