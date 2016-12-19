@@ -50,6 +50,29 @@ var main = function () {
         $(this).find('img').fadeTo(400,1);
         $(this).find('span').fadeTo(400,0);
     });
+    // GALLERY LI CLICK
+    $('#gallery li').click(function () {
+      
+        // Get img src
+        var img = $(this).find('img').attr('src');
+        // Set img src for expanded img
+        $('.exp-img-container').find('img').attr('src',img);
+        // Align exp image
+        offset($('.exp-img-container').find('img'),$('.exp-img-container'));
+        // Set title
+        var title = $(this).find('span').text();
+        $('.wrapper h2').text(title);
+        // Set description
+        var description = $(this).find('.description').text();
+        $('.wrapper p').text(description);
+          // Show overlay
+      $('#overlay').show();
+    });
+    
+    // CLOSE
+    $('.close').click(function () {
+        $('#overlay').hide();
+    });
 };
 
 $(document).ready(main);

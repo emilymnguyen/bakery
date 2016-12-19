@@ -3,9 +3,24 @@
     --li-margin: 20px;
 }
 
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
 body {
     background-olor: #F5F5F5;
     font-family: "Lato", sans-serif;
+    color: #514f4e;
+    font-weight: 400;
 }
 #menu {
     position: fixed;
@@ -35,6 +50,7 @@ body {
   width: 900px;
   left: 50%;
     margin-left: -390px;
+    margin-top: 20px;
 }
 #gallery ul {
     list-style: none;
@@ -47,7 +63,9 @@ body {
     float: left;
     padding: 0px;
     margin-bottom: var(--li-margin);
+     cursor:pointer;
 }
+
 #gallery li:nth-child(3n) {
     margin-left: var(--li-margin);
 }
@@ -68,8 +86,65 @@ body {
 #gallery img:hover {
     opacity: 1;
 }
-
-.description {
+#overlay {
+    opaciy: 0;
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,0.3);
+    width: 100vw;
+    height: 100vh;
+    z-index: 300;
+    top: 0;
+}
+.wrapper {
+     position: relative;
+    left: 50%;
+    margin-top: 40px;
+    margin-left: -250px;
+    background-color: #fff;
+    width: 500px;
+    height: 600px;
+    box-shdow: 0px 0px 1000px 
+}
+.wrpper h2 {
+    color: #fff;
+     font-family: 'Pacifico';
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    margin-top: -60px;
+    padding-left: 20px;
+     textshadow: 0px 0px 2px black;
+}
+.wrapper h2 {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 25px 0px 25px;
+}
+.wrapper p {
+margin-top: -15x;
+    padding: 2px 25px 10px 25px;
+    font-size: 14px;
+}
+.close {
+    width: 475px;
+    position: absolute;
+    text-align: right;
+    padding: 15px 25px 0px 0px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.exp-img-container {
+   
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    
+}
+.exp-img-container img {
+    
+}
+.title {
     font-family: 'Pacifico';
     font-size: 28px;
      line-height: 32px;
@@ -84,13 +159,16 @@ body {
         border: 3px solid rgba(255, 255, 255, 0);
     z-index: 100;
 }
-.description span {
+.title span {
     padding: 10px;
     height: calc(var(--img-dim) - 40px);
     width: calc(var(--img-dim) - 40px);
    
     display: table-cell;
   vertical-align: middle;
-    tex-shadow: 0px 0px 2px black;
+    text-shadow: 0px 0px 2px black;
      opacity: 0;
+}
+.description {
+    display: none;
 }
