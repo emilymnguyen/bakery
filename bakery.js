@@ -36,7 +36,7 @@ var main = function () {
     // GALLERY IMG HOVER
     $('#gallery li').hover(function () {
         // Set img-container background color
-        $('.img-container').css('background-color', "green");
+        $('.img-container').css('background-color', "#000");
         $(this).find('img').fadeTo(400, 0.5);
         $(this).find('span').fadeTo(400, 1);
     }, function () {
