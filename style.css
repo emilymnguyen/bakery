@@ -95,7 +95,7 @@ body {
     right: 0;
     margin: auto;
     /* Default to use before jQuery adjusts */
-    max-height: var(--img-dim);
+    height: var(--img-dim);
 }
 
 .img-container {
