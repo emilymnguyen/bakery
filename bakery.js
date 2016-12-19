@@ -21,6 +21,7 @@ function offset(pic, container) {
     var height = getHeight(pic);
     var cWidth = getWidth(container);
     var cHeight = getHeight(container);
+  //  alert(width+" "+height);
     
     if (width >= height) {
         pic.css('max-height', cHeight);
@@ -40,6 +41,8 @@ var main = function () {
     // ALIGN GALLERY
       $('#gallery li').each(function () {
         offset($(this).find('img'), $(this).find('.img-container'));
+           offset($(this).find('img'), $(this).find('.img-container'));
+           offset($(this).find('img'), $(this).find('.img-container'));
     });
     
     // GALLERY IMG HOVER
