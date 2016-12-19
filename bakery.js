@@ -31,7 +31,7 @@ var main = function () {
     // ALIGN GALLERY
     $('#gallery li').each(function () {
         var pic = $(this).find('img');
-        setMaxDim(pic, "280px");
+        setMaxDim(pic, "300px");
     });
     // GALLERY IMG HOVER
     $('#gallery li').hover(function () {

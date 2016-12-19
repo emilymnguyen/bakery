@@ -1,5 +1,5 @@
 :root {
-    --img-dim: 280px;
+    --img-dim: 300px;
     --li-margin: 20px;
 }
 
@@ -11,6 +11,11 @@
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+}
+
+@font-face {
+    font-family: 'Frontage Outline';
+    src: url('Frontage-Outline.otf');
 }
 
 html,
@@ -27,43 +32,129 @@ body {
 }
 
 #menu {
-    position: fixed;
-    color: #4f4a48;
-    width: 150px;
+    position: absolute;
+    width: 600px;
+    text-align: center;
     left: 50%;
-    margin-left: -560px;
-    text-align: right;
-    font-size: 14px;
-    margin-top: 120px;
-    border-right: 2px solid #514f4e;
-}
-
-#menu h1 {
+    margin-left: -300px;
+    top: 340px;
+    color: #fff;
     font-family: 'Pacifico';
-    letter-spacing: 1px;
-    color: #988E86;
-}
-
-#menu ul {
-    list-style: none;
-    padding: 0px 17px 0px 0px;
+    font-size: 20px;
 }
 
 #menu li {
-    padding: 10px 0px 10px 0px;
+    display: inline-block;
+    padding: 6px 14px 6px 14px;
+    margin: 0px 10px 0px 10px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.7);
+}
+
+#home {
+    position: relative;
+    background-image: url("photos/honeyjackcupcakes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: -3000;
+    top: 0;
+}
+
+#header {
+    position: relative;
+    width: 700px;
+    left: 50%;
+    margin-left: -350px;
+    font-family: 'Frontage Outline';
+    font-size: 100px;
+    text-align: center;
+    top: 140px;
+    color: #fff;
+    opacity: 0.8;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+#about-me {
+    position: relative;
+    background-clor: #DFEDE7;
+    backgrond-color: #C2D18A;
+    backgound-color: #B3C4BB;
+    background-color: #B2D18A;
+    width: 100vw;
+    height: 100vh;
+    z-index: -3000;
+    top: 0;
+    font-weight: 400;
+        text-shdow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+#bio {
+    position: relative;
+    width: 700px;
+    left: 50%;
+    margin-left: -350px;
+    top: 70px;
+    color: #fff;
+    text-align: center;
+    
+}
+#bio .title {
+    position: relative;
+    font-family: 'Frontage Outline';
+    font-size: 50px;
+    padding: 0;
+    to: -140px;
+    margin: 0px 0px 10px 0px;
+        txt-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+
+}
+#bio .img-container {
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    margin-bottom: 30px;
+    margin-left: -150px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 150px;
+}
+#bio img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 300px;
+}
+.line {
+     position: relative;
+    width: 250px;
+    left: 50%;
+    margin-left: -125px;
+    background-color: white;
+    height: 3px;
+    margin-bottom: 12px;
+    text-shadow: 0px;
 }
 
 #gallery {
     position: relative;
-    width: 900px;
+    width: 940px;
+    overflow: auto;
     left: 50%;
-    margin-left: -390px;
-    margin-top: 20px;
+    margin-left: -470px;
+    margin-top: 80px;
+    margin-bottom: 60px;
 }
 
 #gallery ul {
     list-style: none;
     padding: 0;
+    margin-bottom: 80px;
+    padding-bottom: 80px;
 }
 
 #gallery li {
@@ -99,7 +190,7 @@ body {
     width: auto;
 }
 
-.img-container {
+#gallery .img-container {
     width: auto;
     height: var(--img-dim);
     overflow: hidden;
@@ -181,14 +272,14 @@ body {
     margin: auto;
 }
 
-.title {
+#gallery .title {
     font-family: 'Pacifico';
     font-size: 28px;
     line-height: 32px;
     letter-spacing: 0.5px;
     color: #fff;
     position: relative;
-    top: -273px;
+    top: -293px;
     margin-left: 7px;
     text-align: center;
     width: calc(var(--img-dim) - 20px);
@@ -197,7 +288,7 @@ body {
     z-index: 100;
 }
 
-.title span {
+#gallery .title span {
     padding: 10px;
     height: calc(var(--img-dim) - 40px);
     width: calc(var(--img-dim) - 40px);
