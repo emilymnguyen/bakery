@@ -83,6 +83,7 @@ body {
     height: var(--img-dim);
     overflow: hidden;
     background-color: rgba(0, 0, 0, 1);
+    text-align:center;
 }
 #gallery img:hover {
     opacity: 1;
