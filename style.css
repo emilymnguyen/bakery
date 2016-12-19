@@ -96,6 +96,7 @@ body {
     margin: auto;
     /* Default to use before jQuery adjusts */
     height: var(--img-dim);
+    width: auto;
 }
 
 .img-container {
