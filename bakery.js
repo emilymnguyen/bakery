@@ -17,13 +17,13 @@ function getHeight(obj) {
 };
 
 function setMaxDim(pic, dim) {
-    if (getHeight(pic) >= getWidth(pic)) {
+    if (getHeight(pic) > getWidth(pic)) {
         $(pic).css('width', dim);
-        $(pic).css('height', "");
+        $(pic).css('height', "auto");
     }
-    else {
+    else if ((getHeight(pic) < getWidth(pic)) {
         $(pic).css('height', dim);
-        $(pic).css('width', "");
+        $(pic).css('width', "auto");
     }
     return;
 };
