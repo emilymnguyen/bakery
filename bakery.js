@@ -21,7 +21,7 @@ function setMaxDim(pic, dim) {
         $(pic).css('width', dim);
         $(pic).css('height', "auto");
     }
-    else if ((getHeight(pic) < getWidth(pic)) {
+    else if (getHeight(pic) < getWidth(pic)) {
         $(pic).css('height', dim);
         $(pic).css('width', "auto");
     }
