@@ -49,9 +49,16 @@ var main = function () {
         var img = $(this).find('img').attr('src');
         // Set img src for expanded img
         $('.exp-img-container').find('img').attr('src', img);
-        // Align exp image
+        // Resize exp-img-container
         var pic = $('.exp-img-container').find('img');
-        setMaxDim(pic, "500px");
+        // Set height to 500
+        $(pic).css('height', "500px");
+        var width = getWidth(pic);
+        // Set width to width of img
+        $('.exp-img-container').css('width', width + "px");
+        $('.wrapper').css('width', width + "px");
+        // Center
+        $('.wrapper').css('margin-left', -(width / 2));
         // Set title
         var title = $(this).find('span').text();
         $('.wrapper h2').text(title);
