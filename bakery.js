@@ -68,6 +68,9 @@ var main = function () {
     $('.close').click(function () {
         $('#overlay').hide();
     });
+    
+    // Set img-container background color
+    $('.img-container').css('background-color',"#000");
     /*
     // Show page when done
     $('body').css('visibility',"visible");

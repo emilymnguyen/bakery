@@ -103,7 +103,6 @@ body {
     height: var(--img-dim);
     overflow: hidden;
     position: relative;
-    background-color: rgba(0, 0, 0, 1);
 }
 
 #gallery img:hover {
