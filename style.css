@@ -4,25 +4,28 @@
 }
 
 * {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font-size: 100%;
-        vertical-align: baseline;
-        background: transparent;
-    }
-html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html,
+body {
     margin: 0 !important;
     padding: 0 !important;
-    visibility: hidden;
 }
+
 body {
     background-olor: #F5F5F5;
     font-family: "Lato", sans-serif;
     color: #514f4e;
     font-weight: 400;
 }
+
 #menu {
     position: fixed;
     color: #514f4e;
@@ -32,101 +35,122 @@ body {
     text-align: right;
     font-size: 14px;
     margin-top: 120px;
-     border-right: 2px solid #514f4e;
+    border-right: 2px solid #514f4e;
 }
+
 #menu h1 {
     font-family: 'Pacifico';
     letter-spacing: 1px;
     color: #988E86;
 }
+
 #menu ul {
     list-style: none;
     padding: 0px 17px 0px 0px;
 }
+
 #menu li {
     padding: 10px 0px 10px 0px;
 }
+
 #gallery {
-  position: relative;
-  width: 900px;
-  left: 50%;
+    position: relative;
+    width: 900px;
+    left: 50%;
     margin-left: -390px;
     margin-top: 20px;
 }
+
 #gallery ul {
     list-style: none;
     padding: 0;
-    
 }
+
 #gallery li {
     width: var(--img-dim);
     height: var(--img-dim);
     float: left;
     padding: 0px;
     margin-bottom: var(--li-margin);
-     cursor:pointer;
+    cursor: pointer;
 }
 
 #gallery li:nth-child(3n) {
     margin-left: var(--li-margin);
 }
+
 #gallery li:nth-child(3n + 1) {
     margin-right: var(--li-margin);
 }
+
 #gallery img {
-    -webkit-filter: blur(0px); /* Safari */
+    -webkit-filter: blur(0px);
+    /* Safari */
     filter: blur(0px);
     opacity: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
+
 .img-container {
-     width: var(--img-dim);
+    width: var(--img-dim);
     height: var(--img-dim);
     overflow: hidden;
+    position: relative;
     background-color: rgba(0, 0, 0, 1);
-    text-align:center;
 }
+
 #gallery img:hover {
     opacity: 1;
 }
+
 #overlay {
-    opaciy: 0;
     display: none;
     position: fixed;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     width: 100vw;
     height: 100vh;
     z-index: 300;
     top: 0;
 }
+
 .wrapper {
-     position: relative;
+    position: relative;
     left: 50%;
     margin-top: 40px;
     margin-left: -250px;
     background-color: #fff;
     width: 500px;
     height: 600px;
-    box-shdow: 0px 0px 1000px 
+    box-shdow: 0px 0px 1000px
 }
+
 .wrpper h2 {
     color: #fff;
-     font-family: 'Pacifico';
+    font-family: 'Pacifico';
     font-size: 28px;
     letter-spacing: 0.5px;
     margin-top: -60px;
     padding-left: 20px;
-     textshadow: 0px 0px 2px black;
+    textshadow: 0px 0px 2px black;
 }
+
 .wrapper h2 {
     font-size: 14px;
     font-weight: 700;
     padding: 14px 20px 0px 20px;
 }
+
 .wrapper p {
-margin-top: -15x;
+    margin-top: -15x;
     padding: 2px 20px 10px 20px;
     font-size: 14px;
 }
+
 .close {
     width: 475px;
     position: absolute;
@@ -135,21 +159,29 @@ margin-top: -15x;
     font-size: 30px;
     color: #fff;
     cursor: pointer;
+    z-index: 100;
 }
+
 .exp-img-container {
-   
+    position: relative;
     overflow: hidden;
     width: 500px;
     height: 500px;
-    
 }
+
 .exp-img-container img {
-    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
+
 .title {
     font-family: 'Pacifico';
     font-size: 28px;
-     line-height: 32px;
+    line-height: 32px;
     letter-spacing: 0.5px;
     color: #fff;
     position: relative;
@@ -158,19 +190,20 @@ margin-top: -15x;
     text-align: center;
     width: calc(var(--img-dim) - 20px);
     height: calc(var(--img-dim) - 20px);
-        border: 3px solid rgba(255, 255, 255, 0);
+    border: 3px solid rgba(255, 255, 255, 0);
     z-index: 100;
 }
+
 .title span {
     padding: 10px;
     height: calc(var(--img-dim) - 40px);
     width: calc(var(--img-dim) - 40px);
-   
     display: table-cell;
-  vertical-align: middle;
+    vertical-align: middle;
     text-shadow: 0px 0px 2px black;
-     opacity: 0;
+    opacity: 0;
 }
+
 .description {
     display: none;
 }
