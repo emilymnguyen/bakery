@@ -27,37 +27,48 @@ function setMaxDim(pic, dim) {
     }
     return;
 };
-/*
-function home() {
-    $(window).animate({
-        scrollTop: "0px";
-    });
-};*/
 var main = function () {
-    // MENU BUTTONS
+    /* BUTTONS */
+    // HOME BUTTON
     $('#home-button').click(function () {
         $("html, body").animate({
             scrollTop: 0
         }, "slow");
     });
+    // ABOUT ME BUTTON
     $('#about-me-button').click(function () {
         var windowHeight = $(window).height();
         $("html, body").animate({
             scrollTop: windowHeight
         }, "slow");
     });
+    // GALLERY BUTTON
     $('#gallery-button').click(function () {
         var windowHeight = $(window).height();
         $("html, body").animate({
             scrollTop: 2 * windowHeight
         }, "slow");
     });
+    // CONTACT BUTTON
     $('#contact-button').click(function () {
         var windowHeight = $(window).height();
         var docHeight = $(document).height();
+        // Set shake delay
+        var delay = '300';
+        // Set shake delay to 0 if already at bottom of page
+        if ($(document).scrollTop() >= (docHeight - windowHeight)) {
+            delay = '0';
+        }
+        // Scroll down and shake
         $("html, body").animate({
             scrollTop: docHeight - windowHeight
-        }, "slow");
+        }, "slow").promise().then(function () {
+            $('#footer li').delay(delay).effect('shake', {
+                times: 2
+                , distance: 4
+                , direction: 'right'
+            }, 400);
+        });
     });
     // HANDLE MENU CSS ON SCROLL
     $(window).scroll(function () {
@@ -108,10 +119,5 @@ var main = function () {
     $('.close').click(function () {
         $('#overlay').hide();
     });
-    /*
-    // Show page when done
-    $('body').css('visibility',"visible");
-    $('html').css('visibility',"visible");*/
 };
 $(document).ready(main);
-//$(window).on('load', main);
