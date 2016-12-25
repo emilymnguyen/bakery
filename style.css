@@ -25,29 +25,34 @@ body {
 }
 
 body {
-    background-olor: #F5F5F5;
-    font-family: "Lato", sans-serif;
+    font-family: "Muli", sans-serif;
     color: #4f4a48;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 #menu {
-    position: absolute;
-    width: 600px;
+    position: fixed;
+    width: 700px;
     text-align: center;
     left: 50%;
-    margin-left: -300px;
-    top: 340px;
+    margin-left: -350px;
+    top: 20px;
     color: #fff;
-    font-family: 'Pacifico';
-    font-size: 20px;
+    fot-family: 'Pacifico';
+    fnt-size: 20px;
+      font-family: 'Muli', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 5px;
 }
 
 #menu li {
     display: inline-block;
-    padding: 6px 14px 6px 14px;
+    padding: 15px 20px 15px 20px;
     margin: 0px 10px 0px 10px;
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.7);
+    txt-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 #home {
@@ -56,57 +61,69 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: #6b5b56;
+    background-attachment: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     z-index: -3000;
     top: 0;
 }
+#home-overlay {
+    position: absolute;
+    backgroud-color: rgba(107, 91, 86, 0.5);
+    backgroud-color: #946363;
+    background-color: #6E4C4C;
+    opacity: 0.5;
+    width: 100vw;
+    height: 200vh;
+}
 
 #header {
-    position: relative;
+    position: absolute;
     width: 700px;
     left: 50%;
     margin-left: -350px;
     font-family: 'Frontage Outline';
     font-size: 100px;
     text-align: center;
-    top: 140px;
+    top: 35vh;
     color: #fff;
-    opacity: 0.8;
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    overflow: visible;
 }
 
 #about-me {
     position: relative;
-    background-clor: #DFEDE7;
-    backgrond-color: #C2D18A;
-    backgound-color: #B3C4BB;
-    background-color: #B2D18A;
     width: 100vw;
     height: 100vh;
-    z-index: -3000;
-    top: 0;
+    z-index: 3000;
+    top: 100vh;
     font-weight: 400;
-        text-shdow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
 }
-
 #bio {
     position: relative;
-    width: 700px;
+    font-family: "Muli";
+    font-weight: 200;
+    font-size: 14px;
+    position: relative;
+    width: 600px;
     left: 50%;
-    margin-left: -350px;
-    top: 70px;
-    color: #fff;
+    margin-left: -300px;
+    top: 15vh;
     text-align: center;
+    background-olor: white;
+    color: white;
+    padding: 0px;
     
 }
 #bio .title {
     position: relative;
-    font-family: 'Frontage Outline';
+    font-family: 'Pacifico';
     font-size: 50px;
     padding: 0;
-    to: -140px;
-    margin: 0px 0px 10px 0px;
+    tp: -40px;
+    margin: 0px 0px 0px 0px;
         txt-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 
 }
@@ -114,7 +131,7 @@ body {
     width: 300px;
     height: 300px;
     left: 50%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     margin-left: -150px;
     overflow: hidden;
     position: relative;
@@ -127,9 +144,9 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    max-height: 300px;
+    max-width: 300px;
 }
-.line {
+.lne {
      position: relative;
     width: 250px;
     left: 50%;
@@ -186,7 +203,7 @@ body {
     right: 0;
     margin: auto;
     /* Default to use before jQuery adjusts */
-    height: var(--img-dim);
+    max-height: var(--img-dim);
     width: auto;
 }
 
@@ -204,8 +221,7 @@ body {
 #overlay {
     display: none;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 100vw;
+background-color: rgba(110, 76, 76, 0.2);    width: 100vw;
     height: 100vh;
     z-index: 300;
     top: 0;
@@ -220,16 +236,6 @@ body {
     width: 500px;
     height: 600px;
     box-shdow: 0px 0px 1000px
-}
-
-.wrpper h2 {
-    color: #fff;
-    font-family: 'Pacifico';
-    font-size: 28px;
-    letter-spacing: 0.5px;
-    margin-top: -60px;
-    padding-left: 20px;
-    textshadow: 0px 0px 2px black;
 }
 
 .wrapper h2 {

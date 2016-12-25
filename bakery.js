@@ -27,7 +27,28 @@ function setMaxDim(pic, dim) {
     }
     return;
 };
+/*
+function home() {
+    $(window).animate({
+        scrollTop: "0px";
+    });
+};*/
 var main = function () {
+    $('#home-button').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+         
+    });
+      $('#about-me-button').click(function () {
+          var windowHeight = $(window).height();
+        $("html, body").animate({ scrollTop: windowHeight }, "slow");
+         
+    });
+     $('#gallery-button').click(function () {
+          var windowHeight = $(window).height();
+        $("html, body").animate({ scrollTop: 2*windowHeight }, "slow");
+         
+    });
+    
     // ALIGN GALLERY
     $('#gallery li').each(function () {
         var pic = $(this).find('img');
