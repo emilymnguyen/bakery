@@ -34,6 +34,7 @@ function home() {
     });
 };*/
 var main = function () {
+    // MENU BUTTONS
     $('#home-button').click(function () {
         $("html, body").animate({
             scrollTop: 0
@@ -51,6 +52,14 @@ var main = function () {
             scrollTop: 2 * windowHeight
         }, "slow");
     });
+    $('#contact-button').click(function () {
+        var windowHeight = $(window).height();
+        var docHeight = $(document).height();
+        $("html, body").animate({
+            scrollTop: docHeight - windowHeight
+        }, "slow");
+    });
+    // HANDLE MENU CSS ON SCROLL
     $(window).scroll(function () {
         var pos = $(this).scrollTop();
         var windowHeight = $(window).height();

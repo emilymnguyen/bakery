@@ -238,86 +238,6 @@ h2 {
     color: var(--font-color);
 }
 
-
-/*
-#gallery ul {
-    position: relative;
-    height: auto;
-    width: 800px;
-    left: 50%;
-    margin-left: -400px;
-    list-style: none;
-    padding: 1px 0px 0px 0px;
-    margin-top: 80px;
-    padding-bottom: 80px;
-}
-#gallery li {
-    width: 800px;
-    height: 300px;
-    padding: 0;
-    margin: 0px 0px 40px 0px;
-    padding: 1px 0px 1px 0px;
-    position: relative;
-    float: left;
-}
-
-#gallery li:nth-child(odd) {
-    padding-right: 1px;
-}
-
-#gallery li:nth-child(even) {
-    padding-left: 1px;
-}
-
-#gallery li:nth-child(odd) .img-container {
-    float: left;
-}
-
-#gallery li:nth-child(even) .img-container {
-    float: right
-}
-
-#gallery li:nth-child(odd) .desc-container {
-    float: right;
-}
-
-#gallery li:nth-child(even) .desc-container {
-    text-align: right;
-    float: left
-}
-
-#gallery li:nth-child(odd) .desc {
-    padding: 20px 0px 40px 40px;
-}
-
-#gallery li:nth-child(even) .desc {
-    padding: 20px 40px 40px 0px;
-}
-
-#gallery .img-container {
-    width: 400px;
-    height: 300px;
-    overflow: hidden;
-    object-fit: cover;
-    float: left;
-}
-
-#gallery .desc-container {
-    width: 400px;
-    float: right;
-    height: 300px;
-    background-color: rgba(107, 91, 86, 0.);
-    backround-color: #F7EDDC;
-    line-height: 24px;
-}
-#gallery h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
-    line-height: 39px;
-*/
-
-
-}
 #overlay {
     display: none;
     position: fixed;
@@ -327,6 +247,7 @@ h2 {
     z-index: 300;
     top: 0;
 }
+
 .wrapper {
     position: relative;
     left: 50%;
@@ -337,16 +258,19 @@ h2 {
     height: 600px;
     box-shdow: 0px 0px 1000px
 }
+
 .wrapper h2 {
     font-size: 14px;
     font-weight: 700;
     padding: 14px 20px 0px 20px;
 }
+
 .wrapper p {
     margin-top: -15x;
     padding: 2px 20px 10px 20px;
     font-size: 14px;
 }
+
 .close {
     width: 100%;
     margin-left: -25px;
@@ -358,6 +282,7 @@ h2 {
     cursor: pointer;
     z-index: 100;
 }
+
 .exp-img-container {
     display: none;
     position: relative;
@@ -365,6 +290,7 @@ h2 {
     width: 500px;
     height: 500px;
 }
+
 .exp-img-container img {
     display: none;
     position: absolute;
@@ -374,6 +300,7 @@ h2 {
     right: 0;
     margin: auto;
 }
+
 #gallery .title {
     display: none;
     font-family: 'Pacifico';
@@ -390,6 +317,7 @@ h2 {
     border: 3px solid rgba(255, 255, 255, 0);
     z-index: 100;
 }
+
 #gallery .title span {
     display: none;
     padding: 10px;
@@ -400,6 +328,55 @@ h2 {
     text-shadow: 0px 0px 2px black;
     opacity: 0;
 }
+
 .description {
     display: none;
+}
+
+#contact {
+    background-image: url("photos/frenchvanillaespressocupcakes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100vw;
+    position: relative;
+    height: 160px;
+    background-color: black;
+}
+
+#contact-overlay {
+    background-color: #754F4F;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100%;
+}
+
+#icons {
+    position: relative;
+    top: 0;
+    text-align: center;
+    font-family: "Petit Formal Script";
+    font-size: 12px;
+    text-transform: lowercase;
+}
+
+#icons ul {
+    margn-top: -210px;
+    margin-top: -186px;
+}
+
+#icons li {
+    display: inline-block;
+    height: 50px;
+    width: 100px;
+    margin: 0px 5px 0px 5px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.icon {
+    height: 50px;
+    width: 100px;
+    display: table-cell;
+    vertical-align: middle;
 }
