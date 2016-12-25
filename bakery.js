@@ -63,12 +63,13 @@ var main = function () {
     $(window).scroll(function () {
         var pos = $(this).scrollTop();
         var windowHeight = $(window).height();
-        if (pos < windowHeight - 80) {
-            $("#menu li").css("background-color", "");
+        // - 65
+        if (pos < windowHeight - 120) {
+            $("#menu ul").css("background-color", "");
             $("#menu li").css("color", "#fff");
         }
         else {
-            $("#menu li").css("background-color", "rgba(117,79,79,0.7)");
+            $("#menu ul").css("background-color", "rgba(117,79,79,0.7)");
             $("#menu li").css("color", "#fff");
         }
     });
