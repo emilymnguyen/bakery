@@ -1,6 +1,6 @@
 :root {
-    --img-dim: 300px;
-    --li-margin: 20px;
+    --font-color: #45423F;
+    --font-color-2: rgba(69, 66, 63, 0.8);
 }
 
 * {
@@ -26,7 +26,7 @@ body {
 
 body {
     font-family: "Muli", sans-serif;
-    color: #383737;
+    color: var(--font-color);
     font-weight: 400;
 }
 
@@ -127,12 +127,14 @@ h2 {
     height: 400px;
     padding-top: 20px;
     float: right;
+    color: var(--font-color-2);
 }
 
 #bio h2 {
     margin-top: 0px;
     font-size: 40px;
     text-transform: lowercase;
+    color: var(--font-color);
 }
 
 #bio p {
@@ -225,6 +227,7 @@ h2 {
     padding: 15px 20px 0px 20px;
     line-height: 17px;
     text-align: left;
+    color: var(--font-color-2);
 }
 
 #gallery h2 {
@@ -232,6 +235,7 @@ h2 {
     margin-bottom: 10px;
     margin-left: 2px;
     line-height: 24px;
+    color: var(--font-color);
 }
 
 
