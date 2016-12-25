@@ -18,11 +18,11 @@ function getHeight(obj) {
 
 function setMaxDim(pic, dim) {
     if (getHeight(pic) > getWidth(pic)) {
-        $(pic).css('width', dim);
+        $(pic).css('width', '300px');
         $(pic).css('height', "auto");
     }
-    else if (getHeight(pic) < getWidth(pic)) {
-        $(pic).css('height', dim);
+    else if (getHeight(pic) <= getWidth(pic)) {
+        $(pic).css('height', '200px');
         $(pic).css('width', "auto");
     }
     return;
@@ -35,34 +35,39 @@ function home() {
 };*/
 var main = function () {
     $('#home-button').click(function () {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-         
+        $("html, body").animate({
+            scrollTop: 0
+        }, "slow");
     });
-      $('#about-me-button').click(function () {
-          var windowHeight = $(window).height();
-        $("html, body").animate({ scrollTop: windowHeight }, "slow");
-         
+    $('#about-me-button').click(function () {
+        var windowHeight = $(window).height();
+        $("html, body").animate({
+            scrollTop: windowHeight
+        }, "slow");
     });
-     $('#gallery-button').click(function () {
-          var windowHeight = $(window).height();
-        $("html, body").animate({ scrollTop: 2*windowHeight }, "slow");
-         
+    $('#gallery-button').click(function () {
+        var windowHeight = $(window).height();
+        $("html, body").animate({
+            scrollTop: 2 * windowHeight
+        }, "slow");
     });
-    
+    $(window).scroll(function () {
+        var pos = $(this).scrollTop();
+        var windowHeight = $(window).height();
+        if (pos < windowHeight - 80) {
+            $("#menu li").css("background-color", "");
+            $("#menu li").css("color", "#fff");
+        }
+        else {
+            $("#menu li").css("background-color", "rgba(117,79,79,0.7)");
+            $("#menu li").css("color", "#fff");
+        }
+    });
     // ALIGN GALLERY
     $('#gallery li').each(function () {
         var pic = $(this).find('img');
-        setMaxDim(pic, "300px");
-    });
-    // GALLERY IMG HOVER
-    $('#gallery li').hover(function () {
-        // Set img-container background color
-        $('.img-container').css('background-color', "#000");
-        $(this).find('img').fadeTo(400, 0.5);
-        $(this).find('span').fadeTo(400, 1);
-    }, function () {
-        $(this).find('img').fadeTo(400, 1);
-        $(this).find('span').fadeTo(400, 0);
+        //setMaxDim(pic, "300px");
+        //$(pic).addClass("cover");
     });
     // GALLERY LI CLICK
     $('#gallery li').click(function () {

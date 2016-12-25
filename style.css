@@ -26,8 +26,13 @@ body {
 
 body {
     font-family: "Muli", sans-serif;
-    color: #4f4a48;
-    font-weight: 200;
+    color: #383737;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Petit Formal Script';
+    text-transform: lowercase;
 }
 
 #menu {
@@ -38,20 +43,18 @@ body {
     margin-left: -350px;
     top: 20px;
     color: #fff;
-    fot-family: 'Pacifico';
-    fnt-size: 20px;
-      font-family: 'Muli', sans-serif;
+    font-family: 'Muli', sans-serif;
     text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    z-index: 100;
 }
 
 #menu li {
     display: inline-block;
     padding: 15px 20px 15px 20px;
-    margin: 0px 10px 0px 10px;
-    txt-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    margin: 0px 15px 0px 15px;
     cursor: pointer;
 }
 
@@ -61,18 +64,17 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: #6b5b56;
     background-attachment: fixed;
     width: 100vw;
     height: 200vh;
     z-index: -3000;
     top: 0;
 }
+
 #home-overlay {
     position: absolute;
-    backgroud-color: rgba(107, 91, 86, 0.5);
-    backgroud-color: #946363;
-    background-color: #6E4C4C;
+    backgrond-color: #9E5757;
+    background-color: #754F4F;
     opacity: 0.5;
     width: 100vw;
     height: 200vh;
@@ -80,15 +82,15 @@ body {
 
 #header {
     position: absolute;
-    width: 700px;
+    width: 1000px;
     left: 50%;
-    margin-left: -350px;
-    font-family: 'Frontage Outline';
-    font-size: 100px;
+    margin-left: -500px;
+    font-family: 'Frontage-Outline';
+    font-size: 120px;
     text-align: center;
-    top: 35vh;
+    top: 32vh;
     color: #fff;
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
     overflow: visible;
 }
 
@@ -98,45 +100,58 @@ body {
     height: 100vh;
     z-index: 3000;
     top: 100vh;
-    font-weight: 400;
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    background-color: white;
 }
+
 #bio {
     position: relative;
     font-family: "Muli";
-    font-weight: 200;
     font-size: 14px;
     position: relative;
-    width: 600px;
-    left: 50%;
-    margin-left: -300px;
+    width: 100vw;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 1);
     top: 15vh;
-    text-align: center;
-    background-olor: white;
-    color: white;
-    padding: 0px;
-    
 }
-#bio .title {
-    position: relative;
-    font-family: 'Pacifico';
-    font-size: 50px;
-    padding: 0;
-    tp: -40px;
-    margin: 0px 0px 0px 0px;
-        txt-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 
-}
-#bio .img-container {
-    width: 300px;
-    height: 300px;
+#bio .container {
+    padding: 50px;
+    width: 850px;
+    position: relative;
     left: 50%;
-    margin-bottom: 10px;
-    margin-left: -150px;
+    margin-left: -475px;
+}
+
+#bio .desc-container {
+    width: 400px;
+    height: 400px;
+    padding-top: 20px;
+    float: right;
+}
+
+#bio h2 {
+    margin-top: 0px;
+    font-size: 40px;
+    text-transform: lowercase;
+}
+
+#bio p {
+    margin-top: 10px;
+    line-height: 22px;
+    margin-left: 0px;
+    letter-spacing: 0.3px;
+}
+
+#bio .img-container {
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin-right: 50px;
     overflow: hidden;
     position: relative;
-    border-radius: 150px;
+    border-radius: 0px;
 }
+
 #bio img {
     position: absolute;
     margin: auto;
@@ -144,89 +159,170 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    max-width: 300px;
-}
-.lne {
-     position: relative;
-    width: 250px;
-    left: 50%;
-    margin-left: -125px;
-    background-color: white;
-    height: 3px;
-    margin-bottom: 12px;
-    text-shadow: 0px;
+    width: 400px;
+    object-fit: cover;
 }
 
 #gallery {
     position: relative;
-    width: 940px;
-    overflow: auto;
-    left: 50%;
-    margin-left: -470px;
-    margin-top: 80px;
-    margin-bottom: 60px;
+    width: 100vw;
+    background-color: #6E4C4C;
+    background-color: rgba(117, 79, 79, 0.1);
+    padding-top: 120px;
+    padding-bottom: 100px;
 }
 
 #gallery ul {
+    position: relative;
+    height: auto;
+    width: 980px;
+    left: 50%;
+    margin-left: -490px;
     list-style: none;
-    padding: 0;
-    margin-bottom: 80px;
-    padding-bottom: 80px;
+    padding: 1px 0px 0px 0px;
+    overflow: auto;
 }
 
 #gallery li {
-    width: var(--img-dim);
-    height: var(--img-dim);
+    width: 300px;
+    height: 370px;
     float: left;
-    padding: 0px;
-    margin-bottom: var(--li-margin);
-    cursor: pointer;
-}
-
-#gallery li:nth-child(3n) {
-    margin-left: var(--li-margin);
+    background-color: rgba(255, 255, 255, .4);
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
 
 #gallery li:nth-child(3n + 1) {
-    margin-right: var(--li-margin);
+    margin-right: 30px;
+    margin-left: 10px;
 }
 
-#gallery img {
-    -webkit-filter: blur(0px);
-    /* Safari */
-    filter: blur(0px);
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    /* Default to use before jQuery adjusts */
-    max-height: var(--img-dim);
-    width: auto;
+#gallery li:nth-child(3n + 0) {
+    margin-left: 30px;
 }
 
 #gallery .img-container {
-    width: auto;
-    height: var(--img-dim);
     overflow: hidden;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    object-fit: cover;
+}
+
+#gallery img {
+    width: 300px;
+}
+
+.cover {
+    object-fit: cover;
+}
+
+#gallery .desc {
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    font-size: 12px;
+    padding: 15px 20px 0px 20px;
+    line-height: 17px;
+    text-align: left;
+}
+
+#gallery h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    line-height: 24px;
+}
+
+
+/*
+#gallery ul {
     position: relative;
+    height: auto;
+    width: 800px;
+    left: 50%;
+    margin-left: -400px;
+    list-style: none;
+    padding: 1px 0px 0px 0px;
+    margin-top: 80px;
+    padding-bottom: 80px;
+}
+#gallery li {
+    width: 800px;
+    height: 300px;
+    padding: 0;
+    margin: 0px 0px 40px 0px;
+    padding: 1px 0px 1px 0px;
+    position: relative;
+    float: left;
 }
 
-#gallery img:hover {
-    opacity: 1;
+#gallery li:nth-child(odd) {
+    padding-right: 1px;
 }
 
+#gallery li:nth-child(even) {
+    padding-left: 1px;
+}
+
+#gallery li:nth-child(odd) .img-container {
+    float: left;
+}
+
+#gallery li:nth-child(even) .img-container {
+    float: right
+}
+
+#gallery li:nth-child(odd) .desc-container {
+    float: right;
+}
+
+#gallery li:nth-child(even) .desc-container {
+    text-align: right;
+    float: left
+}
+
+#gallery li:nth-child(odd) .desc {
+    padding: 20px 0px 40px 40px;
+}
+
+#gallery li:nth-child(even) .desc {
+    padding: 20px 40px 40px 0px;
+}
+
+#gallery .img-container {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+    float: left;
+}
+
+#gallery .desc-container {
+    width: 400px;
+    float: right;
+    height: 300px;
+    background-color: rgba(107, 91, 86, 0.);
+    backround-color: #F7EDDC;
+    line-height: 24px;
+}
+#gallery h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    line-height: 39px;
+*/
+
+
+}
 #overlay {
     display: none;
     position: fixed;
-background-color: rgba(110, 76, 76, 0.2);    width: 100vw;
+    background-color: rgba(110, 76, 76, 0.2);
+    width: 100vw;
     height: 100vh;
     z-index: 300;
     top: 0;
 }
-
 .wrapper {
     position: relative;
     left: 50%;
@@ -237,19 +333,16 @@ background-color: rgba(110, 76, 76, 0.2);    width: 100vw;
     height: 600px;
     box-shdow: 0px 0px 1000px
 }
-
 .wrapper h2 {
     font-size: 14px;
     font-weight: 700;
     padding: 14px 20px 0px 20px;
 }
-
 .wrapper p {
     margin-top: -15x;
     padding: 2px 20px 10px 20px;
     font-size: 14px;
 }
-
 .close {
     width: 100%;
     margin-left: -25px;
@@ -261,15 +354,15 @@ background-color: rgba(110, 76, 76, 0.2);    width: 100vw;
     cursor: pointer;
     z-index: 100;
 }
-
 .exp-img-container {
+    display: none;
     position: relative;
     overflow: hidden;
     width: 500px;
     height: 500px;
 }
-
 .exp-img-container img {
+    display: none;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -277,8 +370,8 @@ background-color: rgba(110, 76, 76, 0.2);    width: 100vw;
     right: 0;
     margin: auto;
 }
-
 #gallery .title {
+    display: none;
     font-family: 'Pacifico';
     font-size: 28px;
     line-height: 32px;
@@ -293,8 +386,8 @@ background-color: rgba(110, 76, 76, 0.2);    width: 100vw;
     border: 3px solid rgba(255, 255, 255, 0);
     z-index: 100;
 }
-
 #gallery .title span {
+    display: none;
     padding: 10px;
     height: calc(var(--img-dim) - 40px);
     width: calc(var(--img-dim) - 40px);
@@ -303,7 +396,6 @@ background-color: rgba(110, 76, 76, 0.2);    width: 100vw;
     text-shadow: 0px 0px 2px black;
     opacity: 0;
 }
-
 .description {
     display: none;
 }
