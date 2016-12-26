@@ -35,6 +35,9 @@ h2 {
     text-transform: lowercase;
 }
 
+
+/* MENU */
+
 #menu {
     position: fixed;
     width: 100vw;
@@ -59,6 +62,9 @@ h2 {
     margin: 10px 30px 10px 30px;
     cursor: pointer;
 }
+
+
+/* HOME */
 
 #home {
     position: relative;
@@ -95,6 +101,9 @@ h2 {
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
     overflow: visible;
 }
+
+
+/* ABOUT ME */
 
 #about-me {
     position: relative;
@@ -167,6 +176,9 @@ h2 {
     object-fit: cover;
 }
 
+
+/* GALLERY */
+
 #gallery {
     position: relative;
     width: 100vw;
@@ -216,10 +228,15 @@ h2 {
 
 #gallery img {
     width: 300px;
+    cursor: pointer;
 }
 
-.cover {
-    object-fit: cover;
+#gallery h2 {
+    font-size: 20px;
+    margin-bottom: 19px;
+    margin-left: 2px;
+    line-height: 24px;
+    color: var(--font-color);
 }
 
 #gallery .desc {
@@ -232,45 +249,35 @@ h2 {
     color: var(--font-color-2);
 }
 
-#gallery h2 {
-    font-size: 20px;
-    margin-bottom: 19px;
-    margin-left: 2px;
-    line-height: 24px;
-    color: var(--font-color);
-}
+
+/* OVERLAY FOR GALLERY EXPAND */
 
 #overlay {
     display: none;
     position: fixed;
-    background-color: rgba(110, 76, 76, 0.2);
+    background-color: rgba(110, 76, 76, 0.7);
     width: 100vw;
     height: 100vh;
     z-index: 300;
     top: 0;
+    text-align: center;
 }
 
-.wrapper {
+#overlay .img-container {
     position: relative;
-    left: 50%;
-    margin-top: 40px;
-    margin-left: -250px;
-    background-color: #fff;
-    width: 500px;
-    height: 600px;
-    box-shdow: 0px 0px 1000px
+    width: 100%;
+    height: 100%;
 }
 
-.wrapper h2 {
-    font-size: 14px;
-    font-weight: 700;
-    padding: 14px 20px 0px 20px;
-}
-
-.wrapper p {
-    margin-top: -15x;
-    padding: 2px 20px 10px 20px;
-    font-size: 14px;
+#overlay img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 80vw;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 .close {
@@ -285,55 +292,8 @@ h2 {
     z-index: 100;
 }
 
-.exp-img-container {
-    display: none;
-    position: relative;
-    overflow: hidden;
-    width: 500px;
-    height: 500px;
-}
 
-.exp-img-container img {
-    display: none;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-#gallery .title {
-    display: none;
-    font-family: 'Pacifico';
-    font-size: 28px;
-    line-height: 32px;
-    letter-spacing: 0.5px;
-    color: #fff;
-    position: relative;
-    top: -293px;
-    margin-left: 7px;
-    text-align: center;
-    width: calc(var(--img-dim) - 20px);
-    height: calc(var(--img-dim) - 20px);
-    border: 3px solid rgba(255, 255, 255, 0);
-    z-index: 100;
-}
-
-#gallery .title span {
-    display: none;
-    padding: 10px;
-    height: calc(var(--img-dim) - 40px);
-    width: calc(var(--img-dim) - 40px);
-    display: table-cell;
-    vertical-align: middle;
-    text-shadow: 0px 0px 2px black;
-    opacity: 0;
-}
-
-.description {
-    display: none;
-}
+/* FOOTER/CONTACT */
 
 #contact {
     background-image: url("photos/frenchvanillaespressocupcakes.jpg");
@@ -407,10 +367,11 @@ h2 {
 }
 
 
-/* FADE ON HOVER */
+/* CSS FOR FADE ON HOVER */
 
 #footer a,
-#menu li {
+#menu li,
+.close {
     -o-transition: .4s;
     -ms-transition: .4s;
     -moz-transition: .4s;
@@ -419,6 +380,7 @@ h2 {
 }
 
 #footer a:hover,
-#menu li:hover {
+#menu li:hover,
+.close:hover {
     opacity: .5;
 }

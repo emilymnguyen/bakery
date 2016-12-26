@@ -1,3 +1,6 @@
+/*
+ * Return the width of an object
+ */
 function getWidth(obj) {
     var clone = obj.clone();
     clone.css("visibility", "hidden");
@@ -5,8 +8,10 @@ function getWidth(obj) {
     var width = clone.outerWidth();
     clone.remove();
     return width;
-};
-
+}
+/*
+ * Return the height of an object
+ */
 function getHeight(obj) {
     var clone = obj.clone();
     clone.css("visibility", "hidden");
@@ -14,19 +19,50 @@ function getHeight(obj) {
     var height = clone.outerHeight();
     clone.remove();
     return height;
-};
-
-function setMaxDim(pic, dim) {
-    if (getHeight(pic) > getWidth(pic)) {
-        $(pic).css('width', '300px');
-        $(pic).css('height', "auto");
+}
+/*
+ * Return the native dimensions of an object
+ */
+function getNativeDim(obj, which) {
+    var copy = new Image();
+    copy.src = $(obj).attr("src");
+    if (which == "w") return copy.width;
+    else return copy.height;
+}
+/*
+ * Resize images for expanded view
+ */
+function resize(pic) {
+    // Reset dim
+    $(pic).css("max-height", "");
+    $(pic).css("max-width", "");
+    // Get dim of window
+    var windowH = $(window).height();
+    var windowW = $(window).width();
+    // Get current dim of pic
+    //  var h = getHeight(pic);
+    //    var w = getWidth(pic);
+    // Get native nim of pic
+    var nativeH = getNativeDim(pic, "h");
+    var nativeW = getNativeDim(pic, "w");
+    var margin = 150;
+    //    alert("window: " + windowW + " x " + windowH + "\ncurrent: " + w + " x " + h + "\nnative: " + nativeW + " x " + nativeH);
+    // Check if pic needs to be sized down
+    if (nativeH <= windowH - margin && nativeW <= windowW - margin) {
+        $(pic).css("max-height", nativeH);
+        $(pic).css("max-width", nativeW);
+        return;
     }
-    else if (getHeight(pic) <= getWidth(pic)) {
-        $(pic).css('height', '200px');
-        $(pic).css('width', "auto");
+    // Set height to windowHeight - 200
+    $(pic).css("max-height", windowH - margin);
+    $(pic).css("width", "auto");
+    // Check if new width is in bounds
+    if (getWidth(pic) >= windowW - margin) {
+        $(pic).css("height", "auto");
+        $(pic).css("max-width", windowW - margin);
     }
     return;
-};
+}
 var main = function () {
     /* BUTTONS */
     // HOME BUTTON
@@ -54,7 +90,7 @@ var main = function () {
         var windowHeight = $(window).height();
         var docHeight = $(document).height();
         // Set shake delay
-        var delay = '300';
+        var delay = '200';
         // Set shake delay to 0 if already at bottom of page
         if ($(document).scrollTop() >= (docHeight - windowHeight)) {
             delay = '0';
@@ -84,40 +120,21 @@ var main = function () {
             $("#menu li").css("color", "#fff");
         }
     });
-    // ALIGN GALLERY
-    $('#gallery li').each(function () {
-        var pic = $(this).find('img');
-        //setMaxDim(pic, "300px");
-        //$(pic).addClass("cover");
-    });
     // GALLERY LI CLICK
-    $('#gallery li').click(function () {
+    $('#gallery img').click(function () {
         // Get img src
-        var img = $(this).find('img').attr('src');
+        var img = $(this).attr('src');
         // Set img src for expanded img
-        $('.exp-img-container').find('img').attr('src', img);
-        // Resize exp-img-container
-        var pic = $('.exp-img-container').find('img');
-        // Set height to 500
-        $(pic).css('height', "500px");
-        var width = getWidth(pic);
-        // Set width to width of img
-        $('.exp-img-container').css('width', width + "px");
-        $('.wrapper').css('width', width + "px");
-        // Center
-        $('.wrapper').css('margin-left', -(width / 2));
-        // Set title
-        var title = $(this).find('span').text();
-        $('.wrapper h2').text(title);
-        // Set description
-        var description = $(this).find('.description').text();
-        $('.wrapper p').text(description);
+        $('#overlay .img-container').find('img').attr('src', img);
+        // Resize
+        img = $('#overlay .img-container').find('img');
+        resize(img);
         // Show overlay
-        $('#overlay').show();
+        $('#overlay').fadeIn();
     });
     // CLOSE
     $('.close').click(function () {
-        $('#overlay').hide();
+        $('#overlay').fadeOut();
     });
 };
 $(document).ready(main);
