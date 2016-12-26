@@ -39,14 +39,10 @@ function resize(pic) {
     // Get dim of window
     var windowH = $(window).height();
     var windowW = $(window).width();
-    // Get current dim of pic
-    //  var h = getHeight(pic);
-    //    var w = getWidth(pic);
     // Get native nim of pic
     var nativeH = getNativeDim(pic, "h");
     var nativeW = getNativeDim(pic, "w");
     var margin = 150;
-    //    alert("window: " + windowW + " x " + windowH + "\ncurrent: " + w + " x " + h + "\nnative: " + nativeW + " x " + nativeH);
     // Check if pic needs to be sized down
     if (nativeH <= windowH - margin && nativeW <= windowW - margin) {
         $(pic).css("max-height", nativeH);
