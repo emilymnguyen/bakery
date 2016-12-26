@@ -62,7 +62,11 @@ function resize(pic) {
 var main = function () {
     /* BUTTONS */
     // HOME BUTTON
-    $('#home-button').click(function () {
+    $('#logo').click(function () {
+        if ($(document).scrollTop() == 0) {
+            location.reload();
+            return;
+        }
         $("html, body").animate({
             scrollTop: 0
         }, "slow");
@@ -126,11 +130,11 @@ var main = function () {
         img = $('#overlay .img-container').find('img');
         resize(img);
         // Show overlay
-        $('#overlay').fadeIn();
+        $('#overlay').fadeIn(300);
     });
     // CLOSE
     $('.close').click(function () {
-        $('#overlay').fadeOut();
+        $('#overlay').fadeOut(300);
     });
 };
 $(document).ready(main);
