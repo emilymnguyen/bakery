@@ -84,32 +84,29 @@ h2 {
     background-position: center;
     background-attachment: fixed;
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
     z-index: -3000;
     top: 0;
 }
 
 #home-overlay {
-    position: absolute;
+    position: relative;
     /* backgrond-color: #9E5757; */
-    background-color: #754F4F;
-    opacity: 0.5;
+    /* hex: #754F4F */
+    background-color: rgba(117, 79, 79, 0.5);
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #header {
-    position: absolute;
-    width: 1000px;
-    left: 50%;
-    margin-left: -500px;
     font-family: 'Frontage-Outline';
     font-size: 120px;
+    font-size: 11vw;
     text-align: center;
-    top: 32vh;
     color: #fff;
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-    overflow: visible;
 }
 
 
@@ -119,9 +116,9 @@ h2 {
     position: relative;
     width: 100vw;
     height: 100vh;
-    z-index: 3000;
-    top: 100vh;
     background-color: white;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #bio {
@@ -132,7 +129,7 @@ h2 {
     width: 100vw;
     height: 500px;
     background-color: rgba(255, 255, 255, 1);
-    top: 15vh;
+    tp: 15vh;
 }
 
 #bio .container {
