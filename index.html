@@ -20,6 +20,22 @@
 </head>
 
 <body>
+    <!-- Preload images -->
+    <div class="hidden">
+        <script type="text/javascript">
+            <!--//--><![CDATA[//><!--
+            var images = new Array()
+
+            function preload() {
+                for (i = 0; i < preload.arguments.length; i++) {
+                    images[i] = new Image()
+                    images[i].src = preload.arguments[i]
+                }
+            }
+            preload("photos/blueberryscones.jpg", "photos/cinnamonrolls.jpg", "photos/darkchocolatenutellacupcakes.jpg", "photos/pumpkinspicecupcakes.jpg", "photos/darkchocolateraspberrycupcakes.jpg", "photos/cookiesandcreamcupcakes.jpg", "photos/honeyjackcupcakes.jpg", "photos/frenchvanillaespressocupcakes.jpg")
+                //--><!]]>
+        </script>
+    </div>
     <!-- img expand overlay -->
     <div id="overlay">
         <div class="close">✕</div>
