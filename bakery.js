@@ -73,21 +73,21 @@ var main = function () {
     });
     // ABOUT ME BUTTON
     $('#about-me-button').click(function () {
-        var windowHeight = $(window).height();
+        var windowHeight = window.innerHeight;
         $("html, body").animate({
             scrollTop: windowHeight
         }, "slow");
     });
     // GALLERY BUTTON
     $('#gallery-button').click(function () {
-        var windowHeight = $(window).height();
+        var windowHeight = window.innerHeight;
         $("html, body").animate({
             scrollTop: 2 * windowHeight
         }, "slow");
     });
     // CONTACT BUTTON
     $('#contact-button').click(function () {
-        var windowHeight = $(window).height();
+        var windowHeight = window.innerHeight;
         var docHeight = $(document).height();
         // Set shake delay
         var delay = '200';
