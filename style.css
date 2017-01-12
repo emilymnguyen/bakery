@@ -14,8 +14,10 @@
 }
 
 @font-face {
-    font-family: 'Frontage Outline';
-    src: url(Frontage-Outline.otf);
+    font-family: 'frontage_outlineoutline';
+    src: url('frontage-outline-webfont.woff2') format('woff2'), url('frontage-outline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html,
