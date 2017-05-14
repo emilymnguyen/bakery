@@ -60,6 +60,9 @@ function resize(pic) {
     return;
 }
 var main = function () {
+    /*
+       
+       if (getHeight($('#gallery img')) < 18 vh) alert("hsfdj"); */
     /* BUTTONS */
     // HOME BUTTON
     $('#logo').click(function () {
@@ -108,33 +111,32 @@ var main = function () {
     });
     // HANDLE MENU CSS ON SCROLL
     $(window).scroll(function () {
-        var pos = $(this).scrollTop();
-        var windowHeight = $(window).height();
-        // - 65
-        if (pos < windowHeight - 120) {
-            $("#menu ul").css("background-color", "");
-            $("#menu li").css("color", "#fff");
+            var pos = $(this).scrollTop();
+            var windowHeight = $(window).height();
+            // - 65
+            if (pos < windowHeight - 120) {
+                $("#menu ul").css("background-color", "");
+            }
+            else {
+                $("#menu ul").css("background-color", "rgba(140, 102, 99,0.9)");
+               
         }
-        else {
-            $("#menu ul").css("background-color", "rgba(117,79,79,0.7)");
-            $("#menu li").css("color", "#fff");
-        }
     });
-    // GALLERY LI CLICK
-    $('#gallery img').click(function () {
-        // Get img src
-        var img = $(this).attr('src');
-        // Set img src for expanded img
-        $('#overlay .img-container').find('img').attr('src', img);
-        // Resize
-        img = $('#overlay .img-container').find('img');
-        resize(img);
-        // Show overlay
-        $('#overlay').fadeIn(300);
-    });
-    // CLOSE
-    $('.close').click(function () {
-        $('#overlay').fadeOut(300);
-    });
+// GALLERY LI CLICK
+$('#gallery img').click(function () {
+    // Get img src
+    var img = $(this).attr('src');
+    // Set img src for expanded img
+    $('#overlay .img-container').find('img').attr('src', img);
+    // Resize
+    img = $('#overlay .img-container').find('img');
+    resize(img);
+    // Show overlay
+    $('#overlay').fadeIn(300);
+});
+// CLOSE
+$('.close').click(function () {
+    $('#overlay').fadeOut(300);
+});
 };
 $(document).ready(main);
